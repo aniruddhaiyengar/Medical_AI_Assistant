@@ -16,3 +16,8 @@ bitsandbytes
 langchain_community
 numpy
 beautifulsoup4
+peft
+trl
+einops
+wandb
+datasets
