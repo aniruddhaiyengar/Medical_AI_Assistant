@@ -1,3 +1,5 @@
+from text_utils import *
+
 def generate_diagnosis(soap_note, rag_context, chat_history):
     """
     Generates a diagnosis suggestion using the reasoning model based on the SOAP note,

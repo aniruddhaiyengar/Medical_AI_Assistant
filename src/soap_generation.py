@@ -1,3 +1,5 @@
+from text_utils import * 
+
 def generate_soap_note(dialogue_history):
     """
     Generates a SOAP note from the complete dialogue history using the fine-tuned SOAP note generation model.

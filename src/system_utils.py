@@ -1,3 +1,7 @@
+from soap_generation import generate_soap_note
+from audio_utils import *
+from diagnosis import generate_diagnosis
+
 def generate_followup_answer(context):
     """
     Generates a follow-up answer based on the provided context,
@@ -156,6 +160,7 @@ def update_dialogue_generator(new_manual_input, audio_file, conv_state):
     if audio_file:
         steps.append("Step 1: Transcribing audio...")
         yield (conv_state, steps[-1])
+        pipeline = load_diarization_pipeline()
         transcript_text = transcribe_audio(audio_file, asr_model, pipeline)
         steps.append("Step 1: Audio transcription done.")
         yield (conv_state, steps[-1])

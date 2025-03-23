@@ -3,7 +3,7 @@ from pyannote.audio import Pipeline
 
 def load_diarization_pipeline():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    hf_token="HF_TOKEN"
+    hf_token="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"
     pipeline = Pipeline.from_pretrained("pyannote/speaker-diarization-3.1", use_auth_token=hf_token)
     pipeline.to(device)
     return pipeline
@@ -60,4 +60,3 @@ def clean_transcript(transcript):
             break
     cleaned_transcript = "\\n".join(lines[:last_index])
     return cleaned_transcript
-
