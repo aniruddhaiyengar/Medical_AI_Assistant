@@ -7,7 +7,7 @@ from huggingface_hub import login
 def main():
     
     # Huggingface login
-    login(token="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")
+    login(token="HF_TOKEN")
 
     # Load models
     asr_model = load_asr_model()
